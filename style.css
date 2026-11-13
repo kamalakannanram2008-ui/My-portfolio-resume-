@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #172f4d;
+    line-height: 1.6;
+}
+
+/* Navigation */
+
+header {
+    background: #102b4e;
+    padding: 18px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 32px;
+}
+
+.logo span {
+    color: #65b5ee;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #65b5ee;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Home */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    background: linear-gradient(120deg, #eaf4fc, #ffffff);
+}
+
+.hero-content {
+    max-width: 750px;
+    animation: appear 1s ease;
+}
+
+.tag {
+    color: #367db3;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #27699f;
+}
+
+.hero h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-bottom: 25px;
+    color: #53677d;
+}
+
+.btn {
+    display: inline-block;
+    background: #102b4e;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #367db3;
+    transform: translateY(-3px);
+}
+
+/* Common Sections */
+
+.section {
+    padding: 75px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 34px;
+    color: #102b4e;
+    margin-bottom: 35px;
+}
+
+.light {
+    background: #f0f6fc;
+}
+
+/* About */
+
+.about-box {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.about-box h3 {
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+/* Education and Interests */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(16,43,78,0.15);
+}
+
+.card h3 {
+    color: #27699f;
+    margin-bottom: 12px;
+}
+
+.card p {
+    margin-bottom: 8px;
+}
+
+/* Skills */
+
+.skills-container {
+    max-width: 700px;
+    margin: auto;
+    text-align: left;
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill h3 {
+    margin-bottom: 8px;
+}
+
+.progress {
+    background: #dce7f1;
+    height: 13px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress div {
+    height: 100%;
+    background: #27699f;
+    border-radius: 20px;
+}
+
+.python {
+    width: 65%;
+}
+
+.c {
+    width: 60%;
+}
+
+.cpp {
+    width: 50%;
+}
+
+/* Contact */
+
+.contact-box {
+    max-width: 650px;
+    margin: auto;
+    background: #f0f6fc;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.contact-box p {
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-box a {
+    color: #27699f;
+}
+
+/* Footer */
+
+footer {
+    background: #102b4e;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Animation */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 6%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #102b4e;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 60px 7%;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero h2 {
+        font-size: 18px;
+    }
+
+    .section {
+        padding: 55px 7%;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-box {
+        padding: 22px;
+    }
+      }
